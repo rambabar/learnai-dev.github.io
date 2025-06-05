@@ -6,8 +6,8 @@ email: rambabar108@gmail.com
 description: >-
   A comprehensive blog covering Python, Machine Learning, Deep Learning,
   NLP, Generative AI, AI Agents, and End-to-End Deployment.
-url: "https://rambabar.github.io"
-baseurl: ""          # because it’s a “username.github.io” site
+url: "https://learnai-dev.github.io"  # This should match your actual repository name
+baseurl: ""  # Empty for username.github.io or organization.github.io repos
 github_username: rambabar
 linkedin_username: rambabar
 
@@ -55,7 +55,7 @@ author:
 # ─────────────────────────────────────────────────────────────────────────────
 # Collections / Categories
 # ─────────────────────────────────────────────────────────────────────────────
-# We’ll use a data file (see _data/categories.yml) to list categories.
+# We'll use a data file (see _data/categories.yml) to list categories.
 # This makes it easier to loop over them in our nav or category index.
 collections:
   posts:
