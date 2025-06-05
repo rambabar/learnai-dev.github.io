@@ -18,21 +18,48 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: AI Blogs
+title: Fullstack AI Blogs
 email: rambabar108@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A comprehensive blog covering Python, Machine Learning, Deep Learning, NLP, Generative AI, AI Agents, and End-to-End Deployment.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rambabar.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  rambabar
+linkedin_username: rambabar
+
+# SEO and Feed Enhancements
+title_separator: "-"
+permalink: /:title/
+markdown: kramdown
 
 # Build settings
-theme: minima
+theme: cayman
+
+# Plugins
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag # Recommended for better SEO
+  - jekyll-sitemap # Useful for search engines
+  - jekyll-paginate # For paginated blog index (if needed)
+
+paginate: 5
+paginate_path: "/page:num/"
+
+
+# Author block
+author:
+  name: Ram Babar
+  email: rambabar108@gmail.com
+  bio: "Sharing practical insights from Python to Generative AI with real-world deployment examples."
+  location: India
+  avatar: assets\images\ram.jpg # optional
+
+# Categories/Tags (can be used in post front-matter)
+collections:
+  posts:
+    output: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -42,14 +69,14 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
