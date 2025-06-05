@@ -3,7 +3,7 @@
   <ul style="list-style: none; padding: 0;">
     {% for cat in site.data.categories %}
       <li>
-        <a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a>
+        <a href="{{ '/categories/' | append: cat.slug | append: '/' | relative_url }}">{{ cat.name }}</a>
       </li>
     {% endfor %}
   </ul>

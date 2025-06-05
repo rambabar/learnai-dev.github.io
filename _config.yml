@@ -6,8 +6,8 @@ email: rambabar108@gmail.com
 description: >-
   A comprehensive blog covering Python, Machine Learning, Deep Learning,
   NLP, Generative AI, AI Agents, and End-to-End Deployment.
-url: "https://learnai-dev.github.io"  # This should match your actual repository name
-baseurl: ""  # Empty for username.github.io or organization.github.io repos
+url: "https://rambabar.github.io"  # Your GitHub Pages domain
+baseurl: "/learnai-dev.github.io"  # Your repository name (project repo)
 github_username: rambabar
 linkedin_username: rambabar
 

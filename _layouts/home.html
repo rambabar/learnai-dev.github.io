@@ -29,19 +29,19 @@ layout: default
           {% endcase %}
         </div>
         <h3>
-          <a href="/categories/{{ category.slug }}/">{{ category.name }}</a>
+          <a href="{{ '/categories/' | append: category.slug | append: '/' | relative_url }}">{{ category.name }}</a>
         </h3>
         <p class="category-desc">{{ category.description }}</p>
         <div class="category-info">
           <span class="post-count">{{ posts_in_cat.size }} post{% if posts_in_cat.size != 1 %}s{% endif %}</span>
-          <a href="/categories/{{ category.slug }}/" class="explore-btn">Explore →</a>
+          <a href="{{ '/categories/' | append: category.slug | append: '/' | relative_url }}" class="explore-btn">Explore →</a>
         </div>
       </div>
     {% endfor %}
   </div>
   
   <div class="view-all-categories">
-    <a href="/categories/" class="view-all-btn">View All Categories</a>
+    <a href="{{ '/categories/' | relative_url }}" class="view-all-btn">View All Categories</a>
   </div>
 </section>
 
@@ -64,7 +64,7 @@ layout: default
             <span>📅 {{ post.date | date: "%B %d, %Y" }}</span>
             {% if post.categories %}
               {% assign cat = post.categories.first %}
-              <a href="/categories/{{ cat }}/">
+              <a href="{{ '/categories/' | append: cat | append: '/' | relative_url }}">
                 🏷️ {{ site.data.categories | where: "slug", cat | first | map: "name" | first | default: cat }}
               </a>
             {% endif %}

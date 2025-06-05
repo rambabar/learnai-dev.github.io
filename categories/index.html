@@ -14,7 +14,7 @@ permalink: /categories/
     {% assign posts_in_cat = site.posts | where_exp: "post", "post.categories contains category.slug" %}
     <div class="category-card">
       <h3>
-        <a href="/categories/{{ category.slug }}/">
+        <a href="{{ '/categories/' | append: category.slug | append: '/' | relative_url }}">
           {% case category.slug %}
             {% when 'python' %}🐍
             {% when 'ml' %}🤖

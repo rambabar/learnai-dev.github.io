@@ -77,6 +77,6 @@ permalink: /about/
   <div class="cta-section">
     <h3>Ready to dive in?</h3>
     <p>Start exploring our latest posts and join the journey of building amazing AI applications!</p>
-    <a href="/" class="cta-button">Explore Posts →</a>
+    <a href="{{ '/' | relative_url }}" class="cta-button">Explore Posts →</a>
   </div>
 </div>

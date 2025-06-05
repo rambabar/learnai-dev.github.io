@@ -8,7 +8,7 @@ layout: default
       <span>📅 Published on {{ page.date | date: "%B %d, %Y" }}</span>
       {% if page.categories %}
         {% assign cat = page.categories.first %}
-        <a href="/categories/{{ cat }}/">
+        <a href="{{ '/categories/' | append: cat | append: '/' | relative_url }}">
           🏷️ {{ site.data.categories | where: "slug", cat | first | map: "name" | first | default: cat }}
         </a>
       {% endif %}
