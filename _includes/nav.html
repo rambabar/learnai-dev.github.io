@@ -1,0 +1,23 @@
+<nav class="navigation" role="navigation" aria-label="Main Navigation">
+  <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem;">
+    {% for item in site.nav_items %}
+      <li>
+        <a href="{{ item.url | prepend: site.baseurl }}" style="text-decoration: none;">
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+    <li>
+      <span>Categories</span>
+      <ul style="list-style: none; margin: 0; padding: 0 1rem;">
+        {% for cat in site.data.categories %}
+          <li>
+            <a href="/categories/{{ cat.slug }}/" style="text-decoration: none;">
+              {{ cat.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</nav>

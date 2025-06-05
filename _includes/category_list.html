@@ -1,0 +1,10 @@
+<aside class="category-list" style="margin-bottom: 2rem;">
+  <h3>Categories</h3>
+  <ul style="list-style: none; padding: 0;">
+    {% for cat in site.data.categories %}
+      <li>
+        <a href="/categories/{{ cat.slug }}/">{{ cat.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</aside>

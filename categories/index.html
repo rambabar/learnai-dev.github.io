@@ -1,0 +1,37 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div class="category-header">
+  <h1>📚 All Categories</h1>
+  <p class="category-description">Explore our content organized by topic</p>
+</div>
+
+<section class="categories-grid">
+  {% for category in site.data.categories %}
+    {% assign posts_in_cat = site.posts | where_exp: "post", "post.categories contains category.slug" %}
+    <div class="category-card">
+      <h3>
+        <a href="/categories/{{ category.slug }}/">
+          {% case category.slug %}
+            {% when 'python' %}🐍
+            {% when 'ml' %}🤖
+            {% when 'dl' %}🧠
+            {% when 'nlp' %}💬
+            {% when 'genai' %}🎨
+            {% when 'agents' %}🤖
+            {% when 'deployment' %}🚀
+            {% else %}📖
+          {% endcase %}
+          {{ category.name }}
+        </a>
+      </h3>
+      <p class="category-description">{{ category.description }}</p>
+      <div class="category-stats">
+        <span class="post-count">{{ posts_in_cat.size }} post{% if posts_in_cat.size != 1 %}s{% endif %}</span>
+      </div>
+    </div>
+  {% endfor %}
+</section> 

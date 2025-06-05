@@ -1,0 +1,41 @@
+---
+layout: default
+title: Machine Learning
+slug: ml
+permalink: /categories/ml/
+---
+
+<div class="category-header">
+  <h1>🤖 Machine Learning</h1>
+  <p class="category-description">{{ site.data.categories | where: "slug", "ml" | first | map: "description" | first }}</p>
+</div>
+
+<section class="category-posts">
+  {% assign posts_in_cat = site.posts | where_exp: "post", "post.categories contains 'ml'" %}
+  
+  {% if posts_in_cat.size > 0 %}
+    <div class="posts-grid">
+      {% for post in posts_in_cat %}
+        <article class="post-card">
+          <h3>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <div class="post-meta">
+            <span>📅 {{ post.date | date: "%B %d, %Y" }}</span>
+            {% if post.tags %}
+              {% for tag in post.tags limit:3 %}
+                <span class="tag">#{{ tag }}</span>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-category">
+      <p>No posts in this category yet. Check back soon for Machine Learning content!</p>
+    </div>
+  {% endif %}
+</section>

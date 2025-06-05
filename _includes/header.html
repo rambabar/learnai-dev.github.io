@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{{ page.title | default: site.title }}</title>
+  {% seo %} <!-- Uses jekyll-seo-tag plugin -->
+
+  <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}"> <!-- cayman’s built-in if needed -->
+</head>
+<body>
+  <header style="padding: 1rem 0; border-bottom: 1px solid #eaeaea; text-align: center;">
+    <h1 style="margin: 0;">
+      <a href="{{ "/" | relative_url }}" style="text-decoration: none; color: inherit;">
+        {{ site.title }}
+      </a>
+    </h1>
+    <p style="font-style: italic; color: #666;">{{ site.description }}</p>
+    {% include nav.html %}
+  </header>
+  <main style="padding: 2rem 1rem;">

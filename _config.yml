@@ -1,82 +1,74 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+# ─────────────────────────────────────────────────────────────────────────────
+# Site Settings
+# ─────────────────────────────────────────────────────────────────────────────
 title: Fullstack AI Blogs
 email: rambabar108@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A comprehensive blog covering Python, Machine Learning, Deep Learning, NLP, Generative AI, AI Agents, and End-to-End Deployment.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://rambabar.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-github_username:  rambabar
+description: >-
+  A comprehensive blog covering Python, Machine Learning, Deep Learning,
+  NLP, Generative AI, AI Agents, and End-to-End Deployment.
+url: "https://rambabar.github.io"
+baseurl: ""          # because it’s a “username.github.io” site
+github_username: rambabar
 linkedin_username: rambabar
 
-# SEO and Feed Enhancements
-title_separator: "-"
-permalink: /:title/
+# ─────────────────────────────────────────────────────────────────────────────
+# Appearance & Theme
+# ─────────────────────────────────────────────────────────────────────────────
+theme: jekyll-theme-cayman
+#theme: minima #cayman
 markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/  # organized by category/date/title
 
-# Build settings
-theme: cayman
-
+# ─────────────────────────────────────────────────────────────────────────────
 # Plugins
+# ─────────────────────────────────────────────────────────────────────────────
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag # Recommended for better SEO
-  - jekyll-sitemap # Useful for search engines
-  - jekyll-paginate # For paginated blog index (if needed)
-
-paginate: 5
+  - jekyll-feed       # RSS feed
+  - jekyll-seo-tag    # SEO meta tags
+  - jekyll-sitemap    # Sitemap.xml
+  - jekyll-paginate   # Pagination support
+  - jekyll-archives   # (optional) generate archives by category/tag
+paginate: 5            # 5 posts per page
 paginate_path: "/page:num/"
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Navigation (used by _includes/nav.html)
+# ─────────────────────────────────────────────────────────────────────────────
+nav_items:
+  - title: Home
+    url: "/"
+  - title: Categories
+    url: "/categories/"
+  - title: About
+    url: "/about/"
 
-# Author block
+# ─────────────────────────────────────────────────────────────────────────────
+# Author Metadata
+# ─────────────────────────────────────────────────────────────────────────────
 author:
-  name: Ram Babar
+  name: Ramchnadra Babar
   email: rambabar108@gmail.com
   bio: "Sharing practical insights from Python to Generative AI with real-world deployment examples."
   location: India
-  avatar: assets\images\ram.jpg # optional
+  avatar: /assets/images/avatar.png
 
-# Categories/Tags (can be used in post front-matter)
+# ─────────────────────────────────────────────────────────────────────────────
+# Collections / Categories
+# ─────────────────────────────────────────────────────────────────────────────
+# We’ll use a data file (see _data/categories.yml) to list categories.
+# This makes it easier to loop over them in our nav or category index.
 collections:
   posts:
     output: true
 
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
+# ─────────────────────────────────────────────────────────────────────────────
+# Exclude
+# ─────────────────────────────────────────────────────────────────────────────
 exclude:
   - .sass-cache/
   - .jekyll-cache/
-  - gemfiles/
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
+  - README.md

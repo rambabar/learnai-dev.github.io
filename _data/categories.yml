@@ -1,0 +1,27 @@
+- name: Python
+  slug: python
+  description: "Core Python tutorials, tips, and best practices."
+
+- name: Machine Learning
+  slug: ml
+  description: "Machine Learning algorithms, models, and pipelines."
+
+- name: Deep Learning
+  slug: dl
+  description: "Neural networks, TensorFlow, PyTorch, and advanced DL."
+
+- name: NLP
+  slug: nlp
+  description: "Natural Language Processing techniques and tools."
+
+- name: Generative AI
+  slug: genai
+  description: "Transformers, diffusion models, and generation workflows."
+
+- name: AI Agents
+  slug: agents
+  description: "Building intelligent agents, RL, and decision-making."
+
+- name: Deployment
+  slug: deployment
+  description: "From Docker to Kubernetes: productionizing AI apps."
