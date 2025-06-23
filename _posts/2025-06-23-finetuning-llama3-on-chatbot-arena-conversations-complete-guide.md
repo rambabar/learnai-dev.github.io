@@ -2,7 +2,7 @@
 layout: post
 title: "Fine-tuning Llama-3 on Chatbot Arena Conversations: A Complete Implementation Guide"
 date: 2025-06-23 17:30:00 +0530
-categories: [genai]
+categories: [generative-ai]
 tags:
   - llama3
   - finetuning
