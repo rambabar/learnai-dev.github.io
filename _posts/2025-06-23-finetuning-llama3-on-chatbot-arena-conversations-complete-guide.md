@@ -17,6 +17,8 @@ tags:
 
 In this comprehensive guide, I'll walk you through the complete process of fine-tuning Llama-3 on Chatbot Arena conversations using LLaMA-Factory. This implementation demonstrates how to create a production-ready conversational AI system that learns from high-quality human conversations.
 
+> **💡 Interactive Notebook**: You can follow along with this guide using the [complete Colab notebook](https://colab.research.google.com/drive/1N3VsyScOk1rP7UkrW2mRTw4khCrDBhS5#scrollTo=DJzh_kH6z_6D) that contains all the code and can be run directly in your browser.
+
 ## Project Overview
 
 This project fine-tunes Llama-3-8B-Instruct on the Chatbot Arena dataset, which contains real conversations between different AI models. The implementation includes:
@@ -40,7 +42,7 @@ This project fine-tunes Llama-3-8B-Instruct on the Chatbot Arena dataset, which 
 Before diving in, ensure you have:
 
 - **Python 3.8+** with the following packages
-- **Google Colab Pro** (for Tesla T4 GPU)
+- **Google Colab** (for Tesla T4 GPU)
 - **Hugging Face account** with API token
 - **Basic understanding** of transformer models and fine-tuning
 
@@ -440,6 +442,6 @@ The fine-tuned model shows improved conversational abilities while maintaining t
 
 - [LLaMA-Factory GitHub Repository](https://github.com/hiyouga/LLaMA-Factory)
 - [Chatbot Arena Dataset](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations)
-- [Llama-3 Model Card](https://huggingface.co/meta-llama/Llama-3-8b-Instruct)
+- [Llama-3 Model Card](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
 - [LoRA Paper](https://arxiv.org/abs/2106.09685)
 - [Gradio Documentation](https://gradio.app/) 
