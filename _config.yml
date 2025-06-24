@@ -11,6 +11,9 @@ baseurl: "/learnai-dev.github.io"  # Your repository name (project repo)
 github_username: rambabar
 linkedin_username: rambabar
 
+# Show future posts (for development/preview)
+future: true
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Appearance & Theme
 # ─────────────────────────────────────────────────────────────────────────────
